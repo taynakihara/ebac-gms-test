@@ -1,0 +1,23 @@
+{
+  "name": "ebac-gms-test",
+  "version": "1.0.0",
+  "description": "Ebac - Golden Movie Studio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taynakihara/ebac-gms-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taynakihara/ebac-gms-test/issues"
+  },
+  "homepage": "https://github.com/taynakihara/ebac-gms-test#readme",
+  "dependencies": {
+    "cypress": "^14.3.2"
+  }
+}
