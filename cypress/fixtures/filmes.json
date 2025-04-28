@@ -1,0 +1,20 @@
+[
+    {
+        "titulo": "The Lord of the Rings",
+        "ano": "2001",
+        "descricao": "Um grupo de heróis se une para destruir um poderoso anel."
+    },
+
+    {
+        "titulo": "Batman",
+        "ano": "2008",
+        "descricao": "Um vigilante mascarado luta contra o crime em Gotham City."
+    },
+
+    {
+        "titulo": "Origem",
+        "ano": "1980",
+        "descricao": "Um ladrão especializado em roubar segredos corporativos é recrutado para realizar um último trabalho."
+    }
+
+]

@@ -4,10 +4,14 @@ import { generateUserData } from '../support/generateData';
 
 
 describe('Funcionalidade Cadastro de membros', () => {
+
+  beforeEach(() => {
+    cy.visit('/');
+  });
+
   it('Deve validar preenchimento de campos obrigatórios e realizar cadastro com sucesso', () => {
 
     const user = generateUserData();
-    cy.visit('http://127.0.0.1:8080/');
   
     // 1) Submeter sem nada - erro de NOME vazio
     cy.get('#signup-button').click();
@@ -58,7 +62,6 @@ describe('Funcionalidade Cadastro de membros', () => {
 
   it('Deve validar email já cadastrado', () => {
 
-    cy.visit('http://127.0.0.1:8080/')
     cy.get('#signup-firstname').type('Tayna')
     cy.get('#signup-lastname').type('Kihara')
     cy.get('#signup-email').type('taynakihara@teste.com')
@@ -69,7 +72,6 @@ describe('Funcionalidade Cadastro de membros', () => {
 
   it('Deve validar email inválido', () => {
 
-    cy.visit('http://127.0.0.1:8080/')
     cy.get('#signup-firstname').type('Tayna')
     cy.get('#signup-lastname').type('Kihara')
     cy.get('#signup-email').type('test-teste.com')
@@ -82,7 +84,6 @@ describe('Funcionalidade Cadastro de membros', () => {
 
     const user = generateUserData();
 
-    cy.visit('http://127.0.0.1:8080/')
     cy.get('#signup-firstname').type(user.firstName)
     cy.get('#signup-lastname').type(user.lastName)
     cy.get('#signup-email').type(user.email)
@@ -93,7 +94,6 @@ describe('Funcionalidade Cadastro de membros', () => {
 
   it('Deve validar redirecionamento para página de política de privacidade', () => {
 
-    cy.visit('http://127.0.0.1:8080/');  
     cy.contains('a', 'Política de Privacidade').click();
     cy.url().should('include', 'polices.html');
   });
