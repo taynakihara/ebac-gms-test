@@ -9,6 +9,10 @@ describe('Funcionalidade Cadastro de membros', () => {
     cy.visit('/');
   });
 
+  afterEach(() => {
+    cy.screenshot()
+  });
+
   it('Deve validar preenchimento de campos obrigatórios e realizar cadastro com sucesso', () => {
 
     const user = generateUserData();

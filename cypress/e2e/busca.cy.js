@@ -5,6 +5,10 @@ describe('Funcionalidade Busca', () => {
         cy.visit('/');
     });
 
+    afterEach(() => {
+        cy.screenshot()
+    });
+
     it('Deve realizar busca com sucesso', () => {
         
         cy.get('#search-input').type('Matrix');
